@@ -1,0 +1,62 @@
+=font-face($family, $path, $svg, $weight: normal, $style: normal)
+  @font-face
+    font-family: $family
+    src: url("#{$path}.eot")
+    src: url("#{$path}.eot?#iefix") format("embedded-opentype"), url("#{$path}.woff") format("woff"), url("#{$path}.ttf") format("truetype"), url("#{$path}.svg##{$svg}") format("svg")
+    font-weight: $weight
+    font-style: $style
+
+@mixin box-shadow ($shadow)
+  -webkit-box-shadow: $shadow
+  -moz-box-shadow: $shadow
+  box-shadow: $shadow
+
+@mixin box-sizing ($type: border-box)
+  -webkit-box-sizing: $type
+  -moz-box-sizing: $type
+  -o-box-sizing: $type
+  -ms-box-sizing: $type
+  box-sizing: $type
+
+@mixin linear-gradient ($fromColor, $toColor)
+  background-color: $toColor
+  background: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor))
+  background: -webkit-linear-gradient(top, $fromColor, $toColor)
+  background: -moz-linear-gradient(top, $fromColor, $toColor)
+  background: -ms-linear-gradient(top, $fromColor, $toColor)
+  background: -o-linear-gradient(top, $fromColor, $toColor)
+  background: linear-gradient(top, $fromColor, $toColor)
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}')
+
+@mixin linear-gradient-with-img ($fromColor, $toColor, $added)
+  background-color: $toColor
+  background: $added, -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor))
+  background: $added, -webkit-linear-gradient(top, $fromColor, $toColor)
+  background: $added, -moz-linear-gradient(top, $fromColor, $toColor)
+  background: $added, -ms-linear-gradient(top, $fromColor, $toColor)
+  background: $added, -o-linear-gradient(top, $fromColor, $toColor)
+  background: $added, linear-gradient(top, $fromColor, $toColor)
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}')
+
+@mixin button-gradient ($fromColor, $toColor, $fromColor1, $toColor1, $added: url())
+  background-color: $toColor
+  background: $added, -webkit-gradient(linear, left top, left bottom, from($fromColor1), to($toColor1)), -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor))
+  background: $added, -webkit-linear-gradient(top, $fromColor1, $toColor1), -webkit-linear-gradient(top, $fromColor, $toColor)
+  background: $added, -moz-linear-gradient(top, $fromColor1, $toColor1), -moz-linear-gradient(top, $fromColor, $toColor)
+  background: $added, -ms-linear-gradient(top, $fromColor1, $toColor1), -ms-linear-gradient(top, $fromColor, $toColor)
+  background: $added, -o-linear-gradient(top, $fromColor1, $toColor1), -o-linear-gradient(top, $fromColor, $toColor)
+  background: $added, linear-gradient(top, $fromColor1, $toColor), linear-gradient(top, $fromColor, $toColor)
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}')
+
+@mixin border-radius ($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -ms-border-radius: $radius
+  border-radius: $radius
+
+@mixin transition ($transition-property, $transition-time, $method)
+  -webkit-transition: $transition-property $transition-time $method
+  -moz-transition: $transition-property $transition-time $method
+  -ms-transition: $transition-property $transition-time $method
+  -o-transition: $transition-property $transition-time $method
+  transition: $transition-property $transition-time $method

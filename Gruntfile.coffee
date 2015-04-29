@@ -10,16 +10,16 @@ module.exports = (grunt) ->
 
     watch:
       scripts:
-        files: [ "public/**/*.coffee", "!Gruntfile.coffee" ],
+        files: [ "./script/**/*.coffee", "!./**/Gruntfile.coffee" ],
         tasks: [ "coffee:compile" ]
       styles:
-        files: [ "public/**/*.sass" ]
+        files: [ "./**/*.sass" ]
         tasks: [ "sass:compile" ]
       minificationjs:
-        files: [ "public/**/*.js", "!public/**/*.min.js" ]
+        files: [ "./script/**/*.js", "!./script/**/*.min.js" ]
         tasks: [ "uglify:minificationall" ]
       minificationcss:
-        files: [ "public/**/*.css", "!public/**/*.min.css" ]
+        files: [ "./**/*.css", "!./**/*.min.css" ]
         tasks: [ "cssmin:minification" ]
 
     uglify:
@@ -27,7 +27,7 @@ module.exports = (grunt) ->
         files: [
           expand: on
           cwd: "./"
-          src: [ "public/**/*.js", "!public/lib/**/*", "!public/**/*.min.js" ]
+          src: [ "./script/**/*.js", "!./script/**/*.min.js" ]
           dest: "./"
           ext: ".min.js"
         ]
@@ -37,7 +37,7 @@ module.exports = (grunt) ->
         files: [
           expand: on
           cwd: "./"
-          src: [ "public/**/*.coffee", "!Gruntfile.coffee" ]
+          src: [ "./script/**/*.coffee", "!Gruntfile.coffee" ]
           dest: "./"
           ext: ".js"
         ]
@@ -49,7 +49,7 @@ module.exports = (grunt) ->
         files: [
           expand: on
           cwd: "./"
-          src: [ "public/**/*.sass" ]
+          src: [ "./**/*.sass" ]
           dest: "./"
           ext: ".css"
         ]
@@ -59,7 +59,7 @@ module.exports = (grunt) ->
         files: [
           expand: on
           cwd: "./"
-          src: [ "public/**/*.css" ]
+          src: [ "./**/style.css" ]
           dest: "./"
           ext: ".min.css"
         ]

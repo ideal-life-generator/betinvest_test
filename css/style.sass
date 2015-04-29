@@ -1,0 +1,270 @@
+@import "mixins.sass"
+@import "variables.sass"
+@import "main.sass"
+@import "resets.sass"
+@import "buttons.sass"
+
+.main-container
+  float: left
+  height: inherit
+  text-transform: uppercase
+  width: 930px
+
+.info-bar
+  background-color: rgba(255, 255, 255, 0.1)
+  display: table
+  font-size: 40px
+  height: 100px
+  width: inherit
+  .left-container
+    display: table-cell
+    padding-left: 20px
+    text-align: left
+    vertical-align: middle
+    width: 25%
+  .center-container
+    display: table-cell
+    position: relative
+    text-align: center
+    text-shadow: 0px 3px 0px rgba(10, 13, 18, 0.75)
+    vertical-align: middle
+    width: 50%
+  .right-container
+    display: table-cell
+    padding-right: 20px
+    text-align: right
+    vertical-align: middle
+    width: 25%
+
+.content-container
+  height: 924px
+  width: inherit
+
+.main-nav
+  display: table
+  height: 120px
+  width: inherit
+  .left-container
+    display: table-cell
+    padding-left: 20px
+    text-align: left
+    vertical-align: middle
+    width: 25%
+  .center-container
+    display: table-cell
+    font-size: 48px
+    text-align: center
+    text-shadow: 0px 3px 0px rgba(10, 13, 18, 0.75)
+    vertical-align: middle
+    width: 50%
+  .right-container
+    display: table-cell
+    padding-right: 20px
+    text-align: right
+    vertical-align: middle
+    width: 25%
+
+.content
+  height: 804px
+  width: inherit
+  header
+    display: table
+    height: 60px
+    padding-top: 15px
+    width: inherit
+    .left-container
+      display: table-cell
+      padding-left: 20px
+      vertical-align: middle
+      width: 280px
+      &:before
+        background-color: #4f6171
+        content: ""
+        display: block
+        height: 1px
+    .center-container
+      color: #87929e
+      display: table-cell
+      font-size: 30px
+      text-align: center
+      vertical-align: middle
+    .right-container
+      display: table-cell
+      padding-right: 20px
+      vertical-align: middle
+      width: 280px
+      &:before
+        background-color: #4f6171
+        content: ""
+        display: block
+        height: 1px
+  .main-panel
+    width: inherit
+    .enter-panel
+      .left-container
+        display: table-cell
+        padding: 11.5px 10px 11.5px 20px
+        vertical-align: middle
+        width: 50%
+        .enter-wrap
+          @include border-radius(3px)
+          height: 58px
+          overflow: hidden
+          input
+            font-size: 46px
+            height: 90px
+            line-height: 46px
+            margin-top: -18px
+            padding-left: 15px
+            padding-right: 15px
+            width: 100%
+      .right-container
+        display: table-cell
+        padding: 11.5px 20px 11.5px 10px
+        text-align: center
+        vertical-align: middle
+        width: 50%
+    .calculate-panel
+      height: 600px
+      .left-container
+        @include box-sizing()
+        display: table
+        float: left
+        height: inherit
+        padding-left: 12.5px
+        padding-right: 2.5px
+        width: 50%
+        .container-row
+          display: table-row
+          height: ( 100% / 4 )
+          .numbers
+            display: table
+            height: 100%
+            width: 100%
+            .number
+              @include box-sizing()
+              display: table-cell
+              height: 100%
+              padding: 7px
+              text-align: center
+              width: ( 100% / 3 )
+      .right-container
+        @include box-sizing()
+        display: table
+        float: right
+        height: inherit
+        padding-left: 10px
+        padding-right: 20px
+        width: 50%
+        .container-row
+          display: table-row
+          height: ( 100% / 4 )
+          .market-panel-container
+            height: 100%
+            padding-top: 7px
+            .market-panel
+              display: table
+              height: 136px
+              width: 100%
+              .calculate
+                @include border-radius(3px)
+                @include box-shadow(0px 0px 9px 0px rgba(10, 13, 18, 0.44))
+                @include box-sizing()
+                background-color: rgba(255, 255, 255, 0.1)
+                display: table-cell
+                font-size: 36px
+                line-height: 50px
+                padding-left: 20px
+                padding-right: 20px
+                vertical-align: middle
+          .pay-container
+            height: 100%
+            padding-bottom: 12px
+            padding-top: 13px
+            width: 100%
+            display: table
+
+.right-bar
+  @include box-sizing()
+  border-left: 1px solid #030c19
+  float: right
+  height: inherit
+  overflow: hidden
+  position: relative
+  width: 350px
+  .scrolled-list
+    display: table
+    height: inherit
+    position: relative
+    .bet
+      @include box-sizing()
+      border-top: 1px solid #030c19
+      cursor: pointer
+      display: block
+      height: 102.4px
+      &:first-child
+        border-top: none
+      .bet-descriptor
+        @include linear-gradient(#203b53, #152b3e)
+        display: table-cell
+        height: 102.4px
+        padding-left: 20px
+        vertical-align: middle
+        width: 270px
+        &:hover,
+        &:focus
+          @include linear-gradient(#152b3e, #203b53)
+        h5
+          font-size: 24px
+          margin-bottom: 0
+          margin-top: 0
+        p
+          font-size: 18px
+          margin-top: 5px
+      .bet-delete
+        @include box-sizing()
+        @include linear-gradient-with-img(#fca600, #c07400, url("./../image/icon_close.png") 50% 50% no-repeat)
+        border-left: 1px solid #030c19
+        display: table-cell
+        width: 60px
+        &:hover,
+        &:focus
+          @include linear-gradient-with-img(#c07400, #fca600, url("./../image/icon_close.png") 50% 50% no-repeat)
+  .scroll
+    @include box-sizing()
+    cursor: pointer
+    font-size: 24px
+    height: 200px
+    line-height: 16px
+    position: absolute
+    text-align: center
+    text-transform: uppercase
+    width: 100%
+    z-index: 1
+    .button-shadow
+      height: 0
+      position: absolute
+      width: 100%
+      z-index: -1
+    &.scroll-top
+      padding-top: 65px
+      top: 0
+      .arrow
+        background: url("./../image/icon_top-arrow.png") no-repeat 50%
+        height: 14px
+        position: absolute
+        top: 25px
+        width: 100%
+      .button-shadow
+        top: 0
+    &.scroll-bottom
+      bottom: 0
+      padding-top: 125px
+      .arrow
+        background: url("./../image/icon_bottom-arrow.png") no-repeat 50%
+        bottom: 25px
+        height: 14px
+        position: absolute
+        width: 100%
+      .button-shadow
+        bottom: 0

@@ -1,0 +1,52 @@
+@import "mixins.sass"
+@import "variables.sass"
+
+// Fonts
+
++font-face("Open Sans Condensed", "./../font/Open Sans Condensed Bold", "Open Sans Condensed", "bold")
+
+*
+  font-family: "Open Sans Condensed"
+
+html
+  height: 100%
+
+body
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  background-image: url(./../image/background.png)
+  background-repeat: no-repeat
+  color: $white-color
+  font-weight: bold
+  height: 1024px
+  margin: 0
+  user-select: none
+  width: 1280px
+
+// Font colors
+
+.gray
+  color: #bdbaa9
+
+.lightblue
+  color: #87929e
+
+.pink
+  color: #da0f56
+
+.darkorange
+  color: #f9a01b
+
+// Extends
+
+.left
+  float: left
+
+.right
+  float: right
+
+.m-l-20
+  margin-left: 20px

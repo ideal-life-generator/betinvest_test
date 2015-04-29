@@ -1,0 +1,252 @@
+@import "mixins.sass"
+@import "variables.sass"
+
+.eye-of-providence
+  display: inline-block
+  height: 40px
+  margin-left: 30px
+  margin-top: -20px
+  position: absolute
+  top: 50%
+  width: 40px
+  &:before
+    @include border-radius(5px)
+    @include box-shadow(1px 1px 3px 0px rgba(0, 0, 0, 0.15))
+    @include linear-gradient(#eae8dc, #77756a)
+    content: ""
+    height: 40px
+    left: 0
+    position: absolute
+    width: 40px
+  &:after
+    @include border-radius(5px)
+    @include box-shadow(0px 1px 3px 0px rgba(255, 255, 255, 0.6) inset)
+    @include box-sizing()
+    @include linear-gradient-with-img(#b4b1a0, #e0dcc7, url(./../image/icon_eye-of-providence.png) no-repeat 50% 50%)
+    content: ""
+    height: 38px
+    left: 0
+    position: absolute
+    width: 40px
+
+.button
+  @include box-sizing()
+  display: table-cell
+  position: relative
+  text-align: center
+  vertical-align: middle
+  &:before
+    @include border-radius(5px)
+    content: ""
+    position: absolute
+    z-index: -2
+  &:after
+    @include border-radius(5px)
+    content: ""
+    position: absolute
+    z-index: -1
+
+.back-button
+  @extend .button
+  @include transition(background-position, 0.15s, ease-in-out)
+  background: url(./../image/icon_left-arrow.png) no-repeat 24px 50%
+  color: $black-color
+  font-size: 30px
+  height: 80px
+  padding-left: 10px
+  width: 140px
+  &:before
+    @include box-shadow(1px 1px 3px 0px rgba(0, 0, 0, 0.15))
+    @include linear-gradient(#eae8dc, #77756a)
+    height: 80px
+    left: 0
+    top: 0
+    width: 140px
+  &:after
+    @include box-shadow(0px 3px 6px 0px rgba(255, 255, 255, 0.6) inset)
+    @include linear-gradient(#e0dcc7, #b4b1a0)
+    height: 76px
+    left: 0
+    top: 0
+    width: 140px
+  &:hover,
+  &:focus
+    background-position: 20px 50%
+    &:after
+      @include linear-gradient(#b4b1a0, #e0dcc7)
+
+.home-button
+  @extend .button
+  @include transition(background-position, 0.15s, ease-in-out)
+  background: url(./../image/icon_home.png) no-repeat 13px 50%
+  color: $black-color
+  font-size: 30px
+  height: 80px
+  padding-left: 40px
+  width: 140px
+  &:before
+    @include box-shadow(1px 1px 2px 0px rgba(0, 0, 0, 0.3))
+    @include linear-gradient(#fec964, #7e4c00)
+    height: 80px
+    left: 0
+    top: 0
+    width: 140px
+  &:after
+    @include box-shadow(0px 3px 6px 0px rgba(255, 255, 255, 0.6) inset)
+    @include linear-gradient(#ffa800, #bd7100)
+    height: 76px
+    left: 0
+    top: 0px
+    width: 140px
+  &:hover,
+  &:focus
+    background-position: 13px 43%
+    &:after
+      @include linear-gradient(#bd7100, #ffa800)
+
+.single-button
+  @extend .button
+  @include transition(background-position, 0.15s, ease-in-out)
+  background: url(./../image/icon_dot.png) no-repeat 45px 50%
+  color: $black-color
+  font-size: 30px
+  height: 60px
+  padding-left: 10px
+  width: 208px
+  &:before
+    @include box-shadow(1px 1px 2px 0px rgba(0, 0, 0, 0.3))
+    @include linear-gradient(#fec964, #7e4c00)
+    height: 60px
+    left: 0
+    top: 0
+    width: 208px
+  &:after
+    @include box-shadow(0px 2px 5px 0px rgba(255, 255, 255, 0.6) inset)
+    @include linear-gradient(#ffa800, #bd7100)
+    height: 57px
+    left: 0
+    top: 0px
+    width: 208px
+  &:hover,
+  &:focus
+    background-position: 36px 50%
+    &:after
+      @include linear-gradient(#bd7100, #ffa800)
+
+.multiple-button
+  @extend .button
+  @include transition(background-position, 0.15s, ease-in-out)
+  background: url(./../image/icon_elipse.png) no-repeat 34px 50%
+  color: $black-color
+  font-size: 30px
+  height: 60px
+  padding-left: 45px
+  width: 208px
+  &:before
+    @include box-shadow(1px 1px 3px 0px rgba(0, 0, 0, 0.15))
+    @include linear-gradient(#eae8dc, #77756a)
+    height: 60px
+    left: 0
+    top: 0
+    width: 208px
+  &:after
+    @include box-shadow(0px 2px 5px 0px rgba(255, 255, 255, 0.6) inset)
+    @include linear-gradient(#e0dcc7, #b4b1a0)
+    height: 57px
+    left: 0
+    top: 0
+    width: 208px
+  &:hover,
+  &:focus
+    background-position: 25px 50%
+    &:after
+      @include linear-gradient(#b4b1a0, #e0dcc7)
+
+.number-button
+  @extend .button
+  @include transition(text-shadow, 0.1s, ease-in-out)
+  background-color: transparent
+  color: $white-color
+  font-size: 48px
+  height: 136px
+  text-shadow: 0px 3px 0px rgba(10, 13, 18, 0.75)
+  width: 136px
+  &:before
+    @include box-shadow(1px 1px 3px 0px rgba(0, 0, 0, 0.3))
+    @include linear-gradient(#62b9ff, #09375d)
+    height: 136px
+    left: 0
+    top: 0
+    width: 136px
+  &:after
+    @include box-shadow(0px 3px 6px 0px rgba(255, 255, 255, 0.6) inset)
+    @include linear-gradient(#549cd4, #0b5491)
+    height: 130px
+    left: 0
+    top: 0px
+    width: 136px
+  &:hover,
+  &:focus
+    text-shadow: 0px 3px 0px rgba(10, 13, 18, 0.5)
+    &:after
+      @include linear-gradient(#0b5491, #549cd4)
+
+.operation-button
+  @extend .button
+  @include transition(text-shadow, 0.1s, ease-in-out)
+  background-color: transparent
+  color: $white-color
+  font-size: 30px
+  height: 136px
+  text-shadow: 0px 2px 0px rgba(10, 13, 18, 0.75)
+  text-transform: uppercase
+  width: 136px
+  &:before
+    @include box-shadow(1px 1px 3px 0px rgba(0, 0, 0, 0.3))
+    @include linear-gradient(#62b9ff, #09375d)
+    height: 136px
+    left: 0
+    top: 0
+    width: 136px
+  &:after
+    @include box-shadow(0px 3px 6px 0px rgba(255, 255, 255, 0.6) inset)
+    @include linear-gradient(#549cd4, #0b5491)
+    height: 130px
+    left: 0
+    top: 0
+    width: 136px
+  &:hover,
+  &:focus
+    text-shadow: 0px 2px 0px rgba(10, 13, 18, 0.5)
+    &:after
+      @include linear-gradient(#0b5491, #549cd4)
+
+.pay-button
+  @extend .button
+  @include transition(text-shadow, 0.1s, ease-in-out)
+  background-color: transparent
+  color: $white-color
+  font-size: 48px
+  height: 130px
+  text-shadow: 0px 2px 0px rgba(10, 13, 18, 0.75)
+  text-transform: uppercase
+  width: 100%
+  &:before
+    @include box-shadow(1px 1px 3px 0px rgba(0, 0, 0, 0.3))
+    @include linear-gradient(rgba(160, 226, 71, 0.1), rgba(50, 81, 7, 0.1))
+    height: 137px
+    left: -1px
+    top: -3px
+    width: 100%
+  &:after
+    @include box-shadow(0px 1px 3px 0px rgba(255, 255, 255, 0.6) inset)
+    @include linear-gradient(#8cc53e, #4f800b)
+    height: 130px
+    left: 0
+    top: 0px
+    width: 100%
+  &:hover,
+  &:focus
+    text-shadow: 0px 2px 0px rgba(10, 13, 18, 0.5)
+    &:after
+      @include linear-gradient(#4f800b, #8cc53e)

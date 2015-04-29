@@ -1,0 +1,446 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="./css/style.min.css" />
+  <script src="./libs/TweenLite.min.js"></script>
+  <script src="./libs/CSSPlugin.min.js"></script>
+  <script src="./libs/underscore-min.js"></script>
+  <script src="./libs/jquery-2.1.3.min.js"></script>
+  <script src="./libs/backbone-min.js"></script>
+  <script src="./script/scroll-bar.min.js"></script>
+  <title>betinvest test work</title>
+</head>
+<body>
+
+  <div class="main-container">
+    <aside class="info-bar">
+      <div class="left-container">
+        <img src="./image/logo_betinvest.png" />
+      </div>
+      <div class="center-container">
+        <span class="gray">balance:</span>&nbsp;<span>1 260 &euro;</span>
+        <a href="#" class="eye-of-providence"></a>
+      </div>
+      <div class="right-container">
+        12:45
+      </div>
+    </aside>
+    <div class="content-container">
+      <nav class="main-nav">
+        <div class="left-container">
+          <a href="#" class="back-button">back</a>
+        </div>
+        <header class="center-container">checkout</header>
+        <div class="right-container">
+          <div class="right">
+            <a href="#" class="home-button">home</a>
+          </div>
+        </div>
+      </nav>
+      <section class="content">
+        <header>
+          <div class="left-container"></div>
+          <div class="center-container">ENTER YOUR AMOUNT:</div>
+          <div class="right-container"></div>
+        </header>
+        <div class="main-panel">
+          <div class="enter-panel">
+            <div class="left-container">
+              <div class="enter-wrap">
+                <input type="text" pattern="[0-9]" />
+              </div>
+            </div>
+            <div class="right-container">
+              <div class="left">
+                <a href="" class="single-button">single</a>
+              </div>
+              <div class="right">
+                <a href="" class="multiple-button">multiple</a>
+              </div>
+            </div>
+          </div>
+          <div class="calculate-panel">
+            <div class="left-container">
+              <div class="container-row">
+                <div class="numbers">
+                  <div class="number">
+                    <button class="number-button">1</button>
+                  </div>
+                  <div class="number">
+                    <button class="number-button">2</button>
+                  </div>
+                  <div class="number">
+                    <button class="number-button">3</button>
+                  </div>
+                </div>
+              </div>
+              <div class="container-row">
+                <div class="numbers">
+                  <div class="number">
+                    <button class="number-button">4</button>
+                  </div>
+                  <div class="number">
+                    <button class="number-button">5</button>
+                  </div>
+                  <div class="number">
+                    <button class="number-button">6</button>
+                  </div>
+                </div>
+              </div>
+              <div class="container-row">
+                <div class="numbers">
+                  <div class="number">
+                    <button class="number-button">7</button>
+                  </div>
+                  <div class="number">
+                    <button class="number-button">8</button>
+                  </div>
+                  <div class="number">
+                    <button class="number-button">9</button>
+                  </div>
+                </div>
+              </div>
+              <div class="container-row">
+                <div class="numbers">
+                  <div class="number">
+                    <button class="operation-button">reset</button>
+                  </div>
+                  <div class="number">
+                    <button class="number-button">0</button>
+                  </div>
+                  <div class="number">
+                    <button class="operation-button">delete</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="right-container">
+              <div class="container-row"></div>
+              <div class="container-row"></div>
+              <div class="container-row">
+                <div class="market-panel-container">
+                  <div class="market-panel">
+                    <div class="calculate">
+                      <p><span class="lightblue">market:</span><span class="m-l-20">14</span></p>
+                      <p><span class="lightblue">total bet:</span><span class="m-l-20 pink">1 400 &euro;</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container-row">
+                <div class="pay-container">
+                  <button class="pay-button">pay</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <aside class="right-bar">
+    <div class="scroll scroll-top">
+      scroll up
+      <div class="arrow"></div>
+      <div class="button-shadow"></div>
+    </div>
+    <div class="scrolled-list">
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+      <div class="bet">
+        <div class="bet-descriptor">
+          <h5><span class="darkorange">3.12</span>&nbsp;&nbsp;<span>WIN Feyenoord</span></h5>
+          <p><span>Roma vs Feyenoord</span></p>
+        </div>
+        <div class="bet-delete"></div>
+      </div>
+    </div>
+    <div class="scroll scroll-bottom">
+      scroll down
+      <div class="arrow"></div>
+      <div class="button-shadow"></div>
+    </div>
+  </aside>
+
+</body>
+</html>
